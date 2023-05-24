@@ -9,10 +9,10 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
+<table class="table text-light">
     <thead>
         <tr>
-            <th>
+            <th >
                 @Html.DisplayNameFor(model => model.RatingNum)
             </th>
             <th>
@@ -24,7 +24,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+                <td class="display-1 text-danger">
                 @Html.DisplayFor(modelItem => item.RatingNum)
             </td>
             <td>

@@ -22,3 +22,13 @@
     <a asp-action="Edit" asp-route-id="@Model?.DeveloperId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+<div class="col-md-4">
+    <h4>Games</h4>
+    <ul>
+        @foreach (Game game in ViewBag.Games)
+        {
+            <li>@game.GameName</li>
+        }
+    </ul>
+</div>

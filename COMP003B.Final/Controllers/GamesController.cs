@@ -41,6 +41,23 @@ namespace COMP003B.Final.Controllers
             {
                 return NotFound();
             }
+            
+            // template
+            ViewBag.Developers = from g in _context.Games
+                              join k in _context.GameDevelopers on g.GameId equals k.GameId
+                              join d in _context.Developers on k.DeveloperId equals d.DeveloperId
+                              where g.GameId == id
+                              select d;
+            ViewBag.Platforms = from g in _context.Games
+                                 join n in _context.GamePlatforms on g.GameId equals n.GameId
+                                 join p in _context.Platforms on n.PlatformId equals p.PlatformId
+                                 where g.GameId == id
+                                 select p;
+            ViewBag.Ratings = from g in _context.Games
+                                join v in _context.Ratings on g.GameId equals v.GameId
+                                join r in _context.Ratings on v.RatingId equals r.RatingId
+                                where g.GameId == id
+                                select r;
 
             return View(game);
         }

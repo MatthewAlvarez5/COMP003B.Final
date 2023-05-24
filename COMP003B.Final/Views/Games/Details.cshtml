@@ -28,3 +28,31 @@
     <a asp-action="Edit" asp-route-id="@Model?.GameId">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+<div class="col-md-4">
+    <h4>Developers</h4>
+    <ul>
+        @foreach (Developer developer in ViewBag.Developers)
+        {
+            <li>@developer.DeveloperName</li>
+        }
+    </ul>
+</div>
+<div class="col-md-4">
+    <h4>Platforms</h4>
+    <ul>
+        @foreach (Platform platform in ViewBag.Platforms)
+        {
+            <li>@platform.PlatformName</li>
+        }
+    </ul>
+</div>
+<div class="col-md-4">
+    <h4>Ratings</h4>
+    <ul>
+        @foreach (Rating rating in ViewBag.Ratings)
+        {
+            <li>@rating.RatingNum</li>
+        }
+    </ul>
+</div>

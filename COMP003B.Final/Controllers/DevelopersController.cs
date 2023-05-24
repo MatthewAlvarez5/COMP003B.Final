@@ -42,6 +42,12 @@ namespace COMP003B.Final.Controllers
                 return NotFound();
             }
 
+            ViewBag.Games = from d in _context.Developers
+                              join k in _context.GameDevelopers on d.DeveloperId equals k.DeveloperId
+                              join g in _context.Games on k.GameId equals g.GameId
+                              where d.DeveloperId == id
+                              select g;
+
             return View(developer);
         }
 
