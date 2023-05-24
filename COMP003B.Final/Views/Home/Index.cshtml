@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Game Rater</h2>
+</div>
+<div class="container">
+
+    <div class="row row-cols-3">
+        <div class="col">
+            <div class="card text-end text-bg-dark border-light mb-3" style="width: 400px;">
+                <img src="~/proj1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Add Games</h5>
+                    <p class="card-text">Add Games to the List or Use Existing ones.</p>
+                    <a class="btn btn-info" asp-area="" asp-controller="Games" asp-action="Index">Add Game</a>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-end text-bg-dark border-light mb-3" style="width: 400px;">
+                <img src="~/proj2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Add Developers and Platforms</h5>
+                    <p class="card-text">Add your favorite Developers and Platforms.</p>
+                    <a class="btn btn-info" asp-area="" asp-controller="Developers" asp-action="Index">Add Developers</a>
+                    <a class="btn btn-info" asp-area="" asp-controller="Platforms" asp-action="Index">Add Platforms</a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-end text-bg-dark border-light mb-3" style="width: 400px;">
+                <img src="~/proj3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Add your own Ratings</h5>
+                    <p class="card-text">Rate your games now!</p>
+                    <a class="btn btn-info" asp-area="" asp-controller="Ratings" asp-action="Index">Ratings</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
